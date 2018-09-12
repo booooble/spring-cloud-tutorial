@@ -3,5 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/application-config" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spring-cloud-bootstrap/application-config" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spring-cloud-config/config-repo" vcs="Git" />
   </component>
 </project>
