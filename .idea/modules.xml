@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/spring-cloud-config/client/client.iml" filepath="$PROJECT_DIR$/spring-cloud-config/client/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-bootstrap/book-service/book-service.iml" filepath="$PROJECT_DIR$/spring-cloud-bootstrap/book-service/book-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-bootstrap/config/config.iml" filepath="$PROJECT_DIR$/spring-cloud-bootstrap/config/config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-bootstrap/discovery/discovery.iml" filepath="$PROJECT_DIR$/spring-cloud-bootstrap/discovery/discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-bootstrap/gateway/gateway.iml" filepath="$PROJECT_DIR$/spring-cloud-bootstrap/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-bootstrap/rating-service/rating-service.iml" filepath="$PROJECT_DIR$/spring-cloud-bootstrap/rating-service/rating-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-config/server/server.iml" filepath="$PROJECT_DIR$/spring-cloud-config/server/server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring cloud tutorial.iml" filepath="$PROJECT_DIR$/.idea/spring cloud tutorial.iml" />
     </modules>

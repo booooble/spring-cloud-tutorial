@@ -7,7 +7,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/spring-cloud-config/config-repo/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-config/client/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-bootstrap/config/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-bootstrap/discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-bootstrap/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-bootstrap/book-service/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-bootstrap/rating-service/pom.xml" />
       </list>
     </option>
   </component>
