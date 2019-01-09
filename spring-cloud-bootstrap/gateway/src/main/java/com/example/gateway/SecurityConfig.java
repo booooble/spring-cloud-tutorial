@@ -15,32 +15,43 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 @Order(1)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    @Autowired
-//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.inMemoryAuthentication().withUser("user").password("password")
-//                .roles("USER").and().withUser("admin").password("admin")
-//                .roles("ADMIN");
-//    }
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth)
+        throws Exception
+    {
+        auth.inMemoryAuthentication().withUser("user").password("password")
+            .roles("USER").and().withUser("admin").password("admin")
+            .roles("ADMIN");
+    }
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
+    protected void configure(HttpSecurity http)
+        throws Exception
+    {
         http.authorizeRequests().antMatchers("/book-service/books")
-                .permitAll().antMatchers("/eureka/**").hasRole("ADMIN")
-                .anyRequest().authenticated().and().formLogin().and()
-                .logout().permitAll().logoutSuccessUrl("/book-service/books")
-                .permitAll().and().csrf().disable();
+            .permitAll().antMatchers("/eureka/**").hasRole("ADMIN")
+            .anyRequest().authenticated().and().formLogin().and()
+            .logout().permitAll().logoutSuccessUrl("/book-service/books")
+            .permitAll().and().csrf().disable();
     }
 
     @Configuration
+    // no order tag means this is the last security filter to be evaluated
     public static class AdminSecurityConfig extends WebSecurityConfigurerAdapter {
+
+        @Autowired
+        public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+            auth.inMemoryAuthentication();
+        }
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.NEVER)
-                    .and().httpBasic().disable().authorizeRequests()
-                    .antMatchers(HttpMethod.GET, "/").hasRole("ADMIN")
-                    .antMatchers("/info", "/health").authenticated().anyRequest()
-                    .denyAll().and().csrf().disable();
+                .and().httpBasic().disable()
+                .authorizeRequests().antMatchers(HttpMethod.GET, "/").hasRole("ADMIN")
+                .antMatchers("/info", "/health").authenticated()
+                .anyRequest().denyAll()
+                .and().csrf().disable();
         }
     }
 }
