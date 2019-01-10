@@ -93,4 +93,6 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
+.DS_Store
+
 # End of https://www.gitignore.io/api/maven,intellij
