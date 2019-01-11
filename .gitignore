@@ -9,7 +9,7 @@
 # I added
 .DS_Store
 **/.DS_Store
-**/.idea/*.iml
+**/*.iml
 **/.idea/
 
 # User-specific stuff
