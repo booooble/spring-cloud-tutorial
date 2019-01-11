@@ -10,6 +10,8 @@
 .DS_Store
 **/.DS_Store
 **/*.iml
+**/mvnw
+**/mvnw.cmd
 **/.idea/
 
 # User-specific stuff
