@@ -9,6 +9,8 @@
 # I added
 .DS_Store
 **/.DS_Store
+**/.idea/*.iml
+**/.idea/
 
 # User-specific stuff
 .idea/**/workspace.xml
